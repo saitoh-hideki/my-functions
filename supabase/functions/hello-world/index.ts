@@ -31,3 +31,4 @@ Deno.serve(async (req) => {
 
 */
 // trigger action again
+// trigger deploy after token setup
