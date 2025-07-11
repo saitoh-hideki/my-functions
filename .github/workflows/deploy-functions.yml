@@ -17,6 +17,7 @@ jobs:
         with:
           version: latest
       - name: Deploy to Supabase
-        run: supabase functions deploy hello-world --project-ref mpqeihrzedligpvyghuc
+        run: for dir in supabase/functions/*; do supabase functions deploy $(basename "$dir") --project-ref mpqeihrzedligpvyghuc; done
+
         env:
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
