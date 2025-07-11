@@ -7,3 +7,4 @@ Deno.serve((_req) => {
     headers: { "Content-Type": "text/plain" }
   });
 }, { verify: false });
+// trigger force deploy
